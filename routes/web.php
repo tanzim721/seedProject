@@ -15,9 +15,7 @@ use App\Http\Controllers\CalculatedController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'view'])->name('view');         
 
 Auth::routes();
 
